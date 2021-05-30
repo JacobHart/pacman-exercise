@@ -47,17 +47,23 @@
 
             item.newimg.style.left = item.position.x;
             item.newimg.style.top = item.position.y;
+
+
+            if (item.velocity.x > 0) {
+                item.newimg.src = pacArray[0][0];
+            } else {
+                item.newimg.src = pacArray[1][0];
+            };
+            
+            
+
         })
-        setTimeout(update, 20);
+        setTimeout(update, 40);
     }
 
     function checkCollisions(item) {
         if (item.position.x + item.velocity.x + item.newimg.width > window.innerWidth || item.position.x + item.velocity.x < 0 ) item.velocity.x = -item.velocity.x;
         if (item.position.y + item.velocity.y + item.newimg.height > window.innerHeight || item.position.y + item.velocity.y < 0 ) item.velocity.y = -item.velocity.y;
-        
-        //
-        // detect collision with all walls and make pacman bounce
-        //
     }
 
     function makeOne() {
