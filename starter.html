@@ -50,9 +50,9 @@
 
 
             if (item.velocity.x > 0) {
-                item.newimg.src = pacArray[0][0];
+                item.newimg.src = pacArray[0][Math.round(Math.random())];
             } else {
-                item.newimg.src = pacArray[1][0];
+                item.newimg.src = pacArray[1][Math.round(Math.random())];
             };
             
             
