@@ -38,7 +38,10 @@
         }
     }
 
+    let counter = 0
     function update() {
+        counter++
+        let mounthOpen = Math.floor(counter/15)%2
         //loop over pacmen array and move each one and move image in DOM
         pacMen.forEach((item) => {
             checkCollisions(item)
@@ -50,9 +53,9 @@
 
 
             if (item.velocity.x > 0) {
-                item.newimg.src = pacArray[0][Math.round(Math.random())];
+                item.newimg.src = pacArray[0][mounthOpen];
             } else {
-                item.newimg.src = pacArray[1][Math.round(Math.random())];
+                item.newimg.src = pacArray[1][mounthOpen];
             };
             
             
