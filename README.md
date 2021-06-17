@@ -2,7 +2,7 @@
 ## Description
 When the Add Pacman button is pressed a Pacmen is added to the array of Pacmen, which keeps track of the position and velocity of each Pacmen. The Pacmen bounce of the walls changing direction. Also the mouth opens en closes. 
 
-<img src="PacMan1.png">
+<img src="images/PacMan1.png">
 
 
 ## How to run
